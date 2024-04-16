@@ -1,10 +1,16 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      region:
+        required: true
+        type: string
+        description: 'AWS region'
+      env:
+        required: true
+        type: string
+        description: 'Environment'
 
 env:
   S3_BUCKET_NAME: groom-test-eris
