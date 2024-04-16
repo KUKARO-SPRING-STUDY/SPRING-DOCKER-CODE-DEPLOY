@@ -3,14 +3,10 @@ name: Docker Image CI
 on:
   workflow_dispatch:
     inputs:
-      region:
+      comment:
+        description: 'Comment for the workflow'
         required: true
-        type: string
-        description: 'AWS region'
-      env:
-        required: true
-        type: string
-        description: 'Environment'
+        default: 'Triggered by workflow_dispatch'
 
 env:
   S3_BUCKET_NAME: groom-test-eris
