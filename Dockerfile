@@ -9,4 +9,6 @@ COPY ./index.html /var/www/html/index.html
 COPY ./entrypoint.sh /entrypoint.sh
 COPY build/libs/*.jar /app.jar
 
+EXPOSE 80
+
 ENTRYPOINT ["sh", "/entrypoint.sh"]
