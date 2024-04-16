@@ -14,7 +14,7 @@ env:
   ZIP_FILE: groom-test-docker.zip
 
 jobs:
-  secrets:
+  build:
     environment: develop
     runs-on: ubuntu-latest
     steps:
