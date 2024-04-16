@@ -28,3 +28,17 @@
 - CD 구축: CodeDeploy를 이용하여 EC2 인스턴스에 어플리케이션을 배포합니다.
     - 이때 작성하는 appspec.yml은 배포하는 스프링부트 프로젝트 안에 저장합니다.
     - appspec.yml에서 s3의 이미지를 가져올때 AWS CLI를 사용합니다.
+
+---
+## ec2에서 사용한 작업
+```shell
+sudo su
+yum install -y ruby
+yum install -y wget
+wget https://aws-codedeploy-ap-northeast-2.s3.amazonaws.com/latest/install
+chmod +x install
+./install auto
+service codedeploy-agent status
+yum install -y docker
+service docker start
+```
